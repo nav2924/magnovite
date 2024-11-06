@@ -208,55 +208,107 @@ a:hover {
     border-radius: 50px;
     width: 80%;
 }
-.about-div .about-info,.event-div .event-info{
-    margin-left: 7.5vw;
+/* Ensure the root container doesn't overflow */
+.about-div {
+    overflow-x: hidden;
+    padding: 0 2vw; /* Add padding to avoid content touching the edges */
 }
-.about-info h1 ,.event-info h1{
+
+/* Styling for larger screens */
+.about-div .about-info,
+.event-div .event-info {
+    max-width: 100vw; /* Ensure it doesn’t exceed viewport */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-info h1,
+.event-info h1 {
     font-size: 3.5vw;
     font-style: normal;
     font-weight: 800;
     color: #fff;
-    z-index: 2; 
+    z-index: 2;
     position: relative;
+    text-align: center;
 }
-.about-info p,.event-info p{
-    line-height: 19px;
+
+.about-info p,
+.event-info p {
+    line-height: 1.5;
     color: rgba(255, 255, 255, 0.7);
     opacity: 0.5;
     font-weight: 300;
-    margin-top: -1.5vw;
-    width: 30vw;
+    margin: 0 auto; /* Center the text */
+    max-width: 80%; /* Constrain the paragraph width */
+    text-align: left;
 }
-.about-info .about-grid{
-    width: 92.5%;
+
+.about-info .about-grid {
+    width: 100%;
     margin-top: 3.5vh;
-    height: 30vh;
     display: grid;
-    grid-template-columns: repeat(2,.9fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
     gap: 20px;
+    justify-items: center;
 }
-.about-info .about-grid .card-component{
-    width: 95%;
-    height: 20vh;
+
+.about-info .about-grid .card-component {
+    width: 100%;
+    max-width: 300px; /* Constrain max width of cards */
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(4.8px);
     border-radius: 10px;
     color: #fff;
     border: 2px solid rgba(255, 255, 255, 0.05);
-    padding: 10px;
-    padding-left: 20px;
+    padding: 20px;
+    box-sizing: border-box;
 }
-.about-info .about-grid .card-component p{
-    margin-top: -5px;
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+    .about-info {
+        text-align: center; /* Center align all content within about-info */
+    }
+
+    .about-info h1,
+    .event-info h1 {
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    .about-info p,
+    .event-info p {
+        width: 90%;
+        font-size: 1em;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .about-info .about-grid {
+        justify-items: center; /* Center align cards within the grid */
+    }
 }
-.about-info .about-grid .card-component span{
-    font-weight:400;
-    background: linear-gradient(90deg, #56A48F 0%, #4FFFE5 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+    .about-info h1,
+    .event-info h1 {
+        font-size: 6vw;
+    }
+
+    .about-info p,
+    .event-info p {
+        width: 90%;
+        font-size: 0.9em;
+    }
+
+    .about-info .about-grid .card-component {
+        padding: 15px;
+        justify-items: center;
+    }
 }
+
 .gallery-div h1,.register-div h1{
     font-size: 3.5vw;
     font-style: normal;
