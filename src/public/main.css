@@ -8,7 +8,8 @@ html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .home-div {
@@ -61,6 +62,34 @@ html {
     padding-right: 3.5vw;
     z-index: 1; /* Ensure nav-component is on top */
     position: relative; /* Make sure it respects the higher z-index */
+}
+
+.brochure-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh; /* Centers vertically within the full viewport height */
+    width: 100%;   /* Ensures it's full width */
+}
+
+.download-btn {
+    background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(4.8px);
+    backdrop-filter: blur(4.8px);
+    border-radius: 50px;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    padding: 10px 20px; /* Smaller padding to make the button smaller */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px; 
+}
+
+.download-btn:hover {
+    background: rgba(255, 255, 255, 0.1); /* Slightly darker background on hover */
 }
 
 .nav-component .nav-logo {
@@ -181,6 +210,178 @@ a:hover {
     color: #fff;
     border: 2px solid rgba(255, 255, 255, 0.05);
     padding: 15px;
+    margin-top: -41.5vh;
+    margin-left: 95%;
+    width: fit-content;
+    display: flex;          
+    flex-direction: column; 
+    align-items: center;     
+    height: fit-content;
+    justify-content: center;  
+}
+
+.social-div ul {
+    list-style: none;
+    display: flex;           
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;   
+    margin-left: 0;         
+    padding: 0;  
+    padding-top: .5vw;
+    margin-bottom: -.35vw;           
+}
+
+.social-div ul li {
+    margin-bottom: 1.75vw;
+}
+.social-div ul .line {
+    height: 1px;
+    background-color: #343434;
+    border-radius: 50px;
+    width: 80%;
+}
+/* Ensure the root container doesn't overflow */
+.about-div {
+    overflow-x: hidden;
+    padding: 0 2vw; /* Add padding to avoid content touching the edges */
+}
+
+/* Styling for larger screens */
+.about-div .about-info,
+.event-div .event-info {
+    max-width: 100vw; /* Ensure it doesn’t exceed viewport */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-info h1,
+.event-info h1 {
+    font-size: 3.5vw;
+    font-style: normal;
+    font-weight: 800;
+    color: #fff;
+    z-index: 2;
+    position: relative;
+    text-align: center;
+}
+
+.about-info p,
+.event-info p {
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 0.5;
+    font-weight: 300;
+    margin: 0 auto; /* Center the text */
+    max-width: 80%; /* Constrain the paragraph width */
+    text-align: left;
+}
+
+.about-info .about-grid {
+    width: 100%;
+    margin-top: 3.5vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px;
+    justify-items: center;
+}
+
+.about-info .about-grid .card-component {
+    width: 100%;
+    max-width: 4    00px; /* Constrain max width of cards */
+    background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(4.8px);
+    backdrop-filter: blur(4.8px);
+    border-radius: 10px;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link-btn {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4.8px);
+    border-radius: 50px;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    height: 70%;
+    padding-left: 35px;
+    padding-right: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.nav-links .summa{
+    display: none;
+}
+.home-info{
+    margin-top: 10vw;
+    margin-left: 7.75vw;
+}
+.home-info h1 {
+    font-size: 3.5vw;
+    font-style: normal;
+    font-weight: 800;
+    color: #fff;
+    z-index: 2; 
+    position: relative;
+}
+.home-info p {
+    line-height: 19px;
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 0.5;
+    font-weight: 300;
+    margin-top: -1.5vw;
+    width: 30vw;
+}
+
+.home-info ul {
+    list-style: none;
+    margin-left: -2.75vw;
+}
+.home-info ul li{
+    width: fit-content;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom : 7.5px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4.8px);
+    border-radius: 50px;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+}
+.home-info ul li svg{
+    padding-left: .5vw;
+    padding-right: .5vw;
+}
+
+.home-info ul li span {
+    font-weight: 300;
+    padding-right: .5vw;
+}
+.social-div {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4.8px);
+    border-radius: 50px;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    padding: 15px;
     margin-top: -36.5vh;
     margin-left: 95%;
     width: fit-content;
@@ -261,57 +462,12 @@ a:hover {
     width: 100%;
     max-width: 300px; /* Constrain max width of cards */
     background: rgba(255, 255, 255, 0.05);
-    -webkit-backdrop-filter: blur(4.8px);
     backdrop-filter: blur(4.8px);
     border-radius: 10px;
     color: #fff;
     border: 2px solid rgba(255, 255, 255, 0.05);
     padding: 20px;
     box-sizing: border-box;
-}
-
-/* Medium screens (tablets) */
-@media (max-width: 768px) {
-    .about-info {
-        text-align: center; /* Center align all content within about-info */
-    }
-
-    .about-info h1,
-    .event-info h1 {
-        font-size: 5vw;
-        text-align: center;
-    }
-
-    .about-info p,
-    .event-info p {
-        width: 90%;
-        font-size: 1em;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    .about-info .about-grid {
-        justify-items: center; /* Center align cards within the grid */
-    }
-}
-
-/* Small screens (phones) */
-@media (max-width: 480px) {
-    .about-info h1,
-    .event-info h1 {
-        font-size: 6vw;
-    }
-
-    .about-info p,
-    .event-info p {
-        width: 90%;
-        font-size: 0.9em;
-    }
-
-    .about-info .about-grid .card-component {
-        padding: 15px;
-        justify-items: center;
-    }
 }
 
 .gallery-div h1,.register-div h1{
@@ -359,9 +515,6 @@ a:hover {
     width: 96.5%;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.05);
-   -webkit-backdrop-filter: blur(4.8px);
-    backdrop-filter: blur(4.8px);
-    -webkit-backdrop-filter: blur(4.8px);
     backdrop-filter: blur(4.8px);
     color: #fff;
     border: 2px solid rgba(255, 255, 255, 0.05);
@@ -369,20 +522,37 @@ a:hover {
 .gallery-div .gallery-flex .gallery-flex-1 .gal-1{
     flex: 0.45;
     margin-bottom: 10px;
+
+    background: url("/AT3A3200.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .gallery-div .gallery-flex .gallery-flex-1 .gal-2{
     flex: 0.75;
+
+    background: url("/AT3A3015.JPG");
+    background-size: cover;
 }
 .gallery-div .gallery-flex .gallery-flex-2 .gal-3{
     flex: 0.75;
     margin-bottom: 10px;
+
+    background: url("/AT3A3017.JPG");
+    background-size: cover;
+    /* background-image: */
 }
 .gallery-div .gallery-flex .gallery-flex-2 .gal-4{
     flex: 0.45;
+
+    background: url("/AT3A3002.JPG");
+    background-size: cover;
 }
 .gallery-div .gallery-flex .gallery-flex-3 .gal-5{
     flex: 0.85;
     margin-bottom: 10px;
+
+    background: url("/AT3A3020.JPG");
+    background-size: cover;
 }
 .gallery-div .gallery-flex .gallery-flex-3 .gal-l,
 .gallery-div .gallery-flex .gallery-flex-3 .gal-r{
@@ -429,13 +599,12 @@ a:hover {
     border-radius: 10px;
 }
 .contact-dropdown {
-    -moz-appearance: none;
-    -webkit-appearance: none; 
     appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none;
     font-family: "Inter", sans-serif;
     border-radius: 15px; 
     background: rgba(255, 255, 255, 0.05); 
-    -webkit-backdrop-filter: blur(4.8px);
     backdrop-filter: blur(4.8px); 
     color: #fff; 
     border: 2px solid rgba(255, 255, 255, 0.05); 
@@ -467,7 +636,527 @@ a:hover {
 
 .contact-dropdown option {
     background: rgba(255, 255, 255, 0.05); 
-    -webkit-backdrop-filter: blur(4.8px);
     backdrop-filter: blur(4.8px); 
     color: #111; 
+}
+
+.hamburger{
+    display: NONE;
+}
+
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+   
+    
+    .about-info {
+        text-align: center; /* Center align all content within about-info */
+        z-index: 1;
+    }
+
+    .about-info h1,
+    .event-info h1 {
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    .about-info p,
+    .event-info p {
+        width: 90%;
+        font-size: 1em;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .about-info .about-grid {
+        justify-items: center; /* Center align cards within the grid */
+    }
+    .about-info {
+        text-align: center; /* Center align all content within about-info */
+    }
+
+    .about-info h1,
+    .event-info h1 {
+        font-size: 5vw;
+        text-align: center;
+        z-index: -1;
+    }
+
+    .about-info p,
+    .event-info p {
+        width: 90%;
+        font-size: 1em;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .about-info .about-grid {
+        justify-items: center; /* Center align cards within the grid */
+    }
+    .nav-component {
+        position: relative;
+    }
+    
+    /* Main navigation links */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: -15px;
+        right: 0;
+        background-color: rgba(51, 51, 51, 0.9);
+        width: 50%;
+        text-align: center;
+        height: 1100%;
+        backdrop-filter: blur(10px); /* Subtle blur effect */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        border-radius: 0 0 10px 10px;
+        overflow: hidden;
+        z-index: 10;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links .summa{
+        display: block;
+        background-color: #0F9E78;
+        border-radius: 50px;
+        border: #0F9E78 1px solid;
+        padding: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .nav-links .summa:hover{
+        background-color: transparent;
+        
+    }
+    
+    .nav-links.active {
+        display: block;
+        animation: slideDown 0.4s ease-in-out;
+    }
+    
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 0;
+        margin: 0;
+    }
+    
+    .nav-links ul li {
+        margin: 10px 0;
+    }
+    
+    .nav-links ul li a {
+        color: #fff;
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        transition: color 0.2s ease;
+    }
+    
+    .nav-links ul li a:hover {
+        color: #ff9f1c;
+        text-decoration: underline;
+    }
+    
+    /* Register button for mobile view */
+    .nav-link-btn {
+        display: none;
+    }
+    
+    
+    /* Hamburger icon */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 50px;
+        cursor: pointer;
+        z-index: 15;
+    }
+    
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        transition: all 0.3s ease;
+    }
+    
+    /* Open state of the hamburger menu */
+    .hamburger.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+        background-color: white;
+    }
+    
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+        background-color: white;
+    }
+
+
+    /* contact */
+    body {
+        overflow-x: hidden;
+    }
+    .bg-bubble{
+    /* display: none; */
+    width: 300px;
+    height: 300px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the bubble */
+}
+    
+    .contact-info{
+        margin-right: 5rem;
+    }
+    .contact-flex p, .contact-flex iframe {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .contact-info p {
+        text-align: justify;
+    }
+
+
+
+    .bg-bubble{
+        width: 700px;
+height: 700px;
+background: linear-gradient(180deg, #0F9E78 20.5%, #310538 100%);
+filter: blur(250px);
+top: 80%;
+left: 100%;
+transform: translate(-80%, -80%); /* Center the bubble */
+    }
+    .home-info {
+        margin-top: 15vw;
+        margin-left: 5vw;
+    }
+
+    .home-info ul li{
+        /* display: none; */
+        font-size: 0.9rem;
+       /* margin-right: -5rem; */
+       /* margin-left: 5rem; */
+    }
+
+    .home-info h1 {
+        font-size: 6vw;
+        margin-left: 1.5rem;
+        margin-top: 3rem;
+        z-index: -2;
+    }
+
+    .home-info p {
+        width: 70vw;
+        margin-left: 1.5rem;
+    }
+    .social-div{
+        left: -3rem;
+    }
+
+
+    .contact-div .bg-bubble{
+        top: 85%;
+        left: 100%;
+        width: 1rem;
+    }
+
+
+
+    
+
+
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+    .about-info h1,
+    .event-info h1 {
+        font-size: 6vw;
+    }
+
+    .about-info p,
+    .event-info p {
+        width: 90%;
+        font-size: 0.9em;
+    }
+
+    .about-info .about-grid .card-component {
+        padding: 15px;
+        justify-items: center;
+    }
+/* Main navigation links */
+.nav-links {
+    display: none;
+    position: absolute;
+    top: -15px;
+    right: -30px;
+    background-color: rgba(51, 51, 51, 0.9);
+    width: 80%;
+    text-align: center;
+    height: 1100%;
+    backdrop-filter: blur(10px); /* Subtle blur effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.nav-links .summa{
+    display: block;
+    background-color: #0F9E78;
+    border-radius: 50px;
+    border: #0F9E78 1px solid;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.nav-links .summa:hover{
+    background-color: transparent;
+    
+}
+
+.nav-links.active {
+    display: block;
+    animation: slideDown 0.4s ease-in-out;
+}
+
+.nav-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.nav-links ul li {
+    margin: 10px 0;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    transition: color 0.2s ease;
+}
+
+.nav-links ul li a:hover {
+    color: #ff9f1c;
+    text-decoration: underline;
+}
+
+/* Register button for mobile view */
+.nav-link-btn {
+    display: none;
+}
+
+
+/* Hamburger icon */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 15;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+
+/* Open state of the hamburger menu */
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    background-color: white;
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    background-color: white;
+}
+
+
+
+.contact-flex {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 1rem auto;
+}
+.contact-flex p, .contact-flex iframe {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.contact-info p {
+    text-align: justify;
+}
+.contact-flex h1{
+    z-index: -2;
+}
+
+.contact-flex iframe{
+    width: 80%;
+    height: 10rem;
+}
+
+.contact-info {
+    margin: 0;
+    text-align: center;
+    padding: 1rem;
+}
+
+.contact-info h1 {
+    font-size: 1.5rem;
+}
+
+.contact-info p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.contact-dropdown {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.custom-select-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.bg-bubble{
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(180deg, #0F9E78 20.5%, #310538 100%);
+    filter: blur(250px);
+    top: 90%;
+    left: 135%;
+    transform: translate(-80%, -80%); /* Center the bubble */
+    }
+
+    .home-info {
+        margin-top: 20vw;
+        margin-left: 3vw;
+    }
+
+    .home-info ul li {
+        font-size: 0.8rem;
+        margin-left: -1rem;
+    }
+
+    .home-info h1 {
+        font-size: 7vw;
+        margin-left: 1rem;
+        margin-top: 2rem;
+    }
+
+    .home-info p {
+        width: 80vw;
+        margin-left: 1rem;
+    }
+
+    .social-div {
+        left: -3rem;
+        margin-top: -3vh;
+    }
+
+    .gallery-div h1{
+        z-index: -2;
+    }
+
+
+}
+
+
+
+/* Animation for menu */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* gallery page  */
+
+@media (max-width: 480px) {
+    /* Font and Layout Adjustments */
+    .gallery-div h1 {
+        font-size: 6.5vw;
+    }
+    .gallery-div p {
+        width: 80vw;
+        margin-top: 0.5vw;
+    }
+
+    /* Stack images vertically */
+    .gallery-div .gallery-flex {
+        flex-direction: column;
+        height: 100rem;
+    }
+    .gallery-div .gallery-flex .gallery-flex-1,
+    .gallery-div .gallery-flex .gallery-flex-2,
+    .gallery-div .gallery-flex .gallery-flex-3 {
+        flex-direction: column;
+        width: 90%;
+        margin: 1vw auto;
+    }
+
+    /* Smaller image blocks */
+    .gallery-div .gallery-flex .gallery-flex-1 .gal-1,
+    .gallery-div .gallery-flex .gallery-flex-1 .gal-2,
+    .gallery-div .gallery-flex .gallery-flex-2 .gal-3,
+    .gallery-div .gallery-flex .gallery-flex-2 .gal-4,
+    .gallery-div .gallery-flex .gallery-flex-3 .gal-5 {
+        width: 100%;
+        height: 50vh;
+    }
+
+    /* Adjust control buttons */
+    .gallery-div .gallery-flex .gallery-flex-3 .gallery-controls {
+        flex-direction: row;
+        width: 80%;
+        margin: auto;
+        justify-content: space-evenly;
+    }
 }

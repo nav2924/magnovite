@@ -10,7 +10,7 @@
             Our Gallery
         </h1>
         <p>
-            lorem ipsum is a sample text for content display to showlorem ipsum is a sample text for content display to show
+            <!-- lorem ipsum is a sample text for content display to showlorem ipsum is a sample text for content display to show -->
         </p>
         <div class="gallery-flex">
             <div class="gallery-flex-1">

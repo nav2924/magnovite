@@ -8,9 +8,9 @@
     <div class="bg-bubble-1"></div>
     <Nav />
     <div class="contact-flex">
-        <div class="contact-info">
+        <div class="contact-info" style="width: ;">
             <h1>Contact us</h1>
-            <p>
+            <p >
                 lorem ipsum is a sample text for content display to show the content distribution for mockups in UI design. lorem ipsum is a sample text for content display to show the content distribution for mockups in UI design. 
             </p>
         </div>
