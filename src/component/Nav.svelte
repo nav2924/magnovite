@@ -1,23 +1,19 @@
 <div class="nav-component">
     <div class="nav-logo">
+      <!-- Logo here -->
     </div>
+  
     <div class="nav-links">
-        <ul>
-            <li>
-                Home
-            </li>
-            <li>
-                Events
-            </li>
-            <li>
-                Gallery
-            </li>
-            <li>
-                Contact
-            </li>
-        </ul>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/event">Events</a></li>
+        <li><a href="/gallery">Gallery</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
     </div>
+  
     <div class="nav-link-btn">
-        Register
+      <a href="/register">Register</a>
     </div>
-</div>
+  </div>
+  

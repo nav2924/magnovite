@@ -84,6 +84,20 @@ html {
     height: 70%;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline; /* Optional: underline on hover */
+}
+
+
 .nav-links ul {
     list-style: none;
     display: flex;
