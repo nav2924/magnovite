@@ -73,6 +73,7 @@ html {
 
 .nav-links {
     background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(4.8px);
     backdrop-filter: blur(4.8px);
     border-radius: 50px;
     color: #fff;
@@ -110,6 +111,7 @@ a:hover {
 
 .nav-link-btn {
     background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(4.8px);
     backdrop-filter: blur(4.8px);
     border-radius: 50px;
     color: #fff;
@@ -155,6 +157,7 @@ a:hover {
     align-items: center;
     margin-bottom : 7.5px;
     background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(4.8px);
     backdrop-filter: blur(4.8px);
     border-radius: 50px;
     color: #fff;
@@ -172,6 +175,7 @@ a:hover {
 .social-div {
     position: absolute;
     background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(4.8px);
     backdrop-filter: blur(4.8px);
     border-radius: 50px;
     color: #fff;
@@ -257,6 +261,7 @@ a:hover {
     width: 100%;
     max-width: 300px; /* Constrain max width of cards */
     background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(4.8px);
     backdrop-filter: blur(4.8px);
     border-radius: 10px;
     color: #fff;
@@ -354,6 +359,9 @@ a:hover {
     width: 96.5%;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.05);
+   -webkit-backdrop-filter: blur(4.8px);
+    backdrop-filter: blur(4.8px);
+    -webkit-backdrop-filter: blur(4.8px);
     backdrop-filter: blur(4.8px);
     color: #fff;
     border: 2px solid rgba(255, 255, 255, 0.05);
@@ -421,12 +429,13 @@ a:hover {
     border-radius: 10px;
 }
 .contact-dropdown {
-    appearance: none; 
-    -webkit-appearance: none; 
     -moz-appearance: none;
+    -webkit-appearance: none; 
+    appearance: none; 
     font-family: "Inter", sans-serif;
     border-radius: 15px; 
     background: rgba(255, 255, 255, 0.05); 
+    -webkit-backdrop-filter: blur(4.8px);
     backdrop-filter: blur(4.8px); 
     color: #fff; 
     border: 2px solid rgba(255, 255, 255, 0.05); 
@@ -458,6 +467,7 @@ a:hover {
 
 .contact-dropdown option {
     background: rgba(255, 255, 255, 0.05); 
+    -webkit-backdrop-filter: blur(4.8px);
     backdrop-filter: blur(4.8px); 
     color: #111; 
 }
